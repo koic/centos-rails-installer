@@ -1,0 +1,2 @@
+centos-rails-installer
+======================
