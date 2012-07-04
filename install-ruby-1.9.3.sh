@@ -23,7 +23,8 @@ wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz
 tar zxvf ruby-1.9.3-p194.tar.gz
 cd ruby-1.9.3-p194
 
-./configure --prefix=$HOME/.rbenv/versions/1.9.3-p194
+./configure
+# ./configure --prefix=$HOME/.rbenv/versions/1.9.3-p194
 make
 make install
 
