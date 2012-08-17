@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+RUBY_PATCH_LEVEL=p196
+
 # Prepare Install Ruby
 sudo yum -y install gcc gcc-c++ make zlib-devel httpd-devel openssl-devel curl-devel ncurses-devel gdbm-devel readline-devel sqlite-devel
 
@@ -19,12 +21,12 @@ enabled=0" > /etc/yum.repos.d/epel.repo
 
 sudo yum -y --enablerepo=epel install libyaml-devel
 
-wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz
-tar zxvf ruby-1.9.3-p194.tar.gz
-cd ruby-1.9.3-p194
+wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-RUBY_PATCH_LEVEL.tar.gz
+tar zxvf ruby-1.9.3-$RUBY_PATCH_LEVEL.tar.gz
+cd ruby-1.9.3-$RUBY_PATCH_LEVEL
 
 ./configure
-# ./configure --prefix=$HOME/.rbenv/versions/1.9.3-p194
+# ./configure --prefix=$HOME/.rbenv/versions/1.9.3-RUBY_PATCH_LEVEL
 make
 make install
 
