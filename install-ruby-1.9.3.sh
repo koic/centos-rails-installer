@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-RUBY_PATCH_LEVEL=p196
+RUBY_PATCH_LEVEL=p195
 
 # Prepare Install Ruby
 sudo yum -y install gcc gcc-c++ make zlib-devel httpd-devel openssl-devel curl-devel ncurses-devel gdbm-devel readline-devel sqlite-devel
